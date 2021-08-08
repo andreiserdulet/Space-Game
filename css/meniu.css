@@ -1,0 +1,15 @@
+.meniu{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.start-game h1:hover{
+  color: yellow;
+}
+.exit-game h1:hover{
+  color: yellow;
+}

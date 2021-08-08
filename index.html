@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/meniu.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/planets.css">
+    <link rel="stylesheet" href="css/obstacles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- <div id="space">
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+        <div class="stars"></div>
+      </div> -->
+
+    <!-- <div class="meniu" id="meniu">
+        <div class="start-game" id="start-game"> 
+            <h1>Start</h1>
+        </div>    
+        <div class="exit-game" id="exit-game">
+            <h1>Exit</h1>
+        </div> -->
+
+    <div class="game" id="game">
+        <div class="title">
+            <h1>Space</h1>
+        </div>
+        <div class="history-moves">
+            <h2>Istoric mutari</h2>
+            <div id="historyMoves">
+                <div class="keyboard-wrapper">
+                    <i class="fas fa-arrow-up" id="UP"></i>
+                    <i class="fas fa-arrow-down" id="DOWN"></i>
+                    <i class="fas fa-arrow-left" id="LEFT"></i>
+                    <i class="fas fa-arrow-right" id="RIGHT"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="game-wrapper animate__animated animate__zoomIn" id="game-wrapper">
+
+            <div id="space">
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+                <div class="stars"></div>
+            </div>
+            <h5 id="errorGameOver">Game over</h5>
+            <h5 id="winMessage"> Ai reusit!</h5>
+            <button class="next-level-text" id="nextLevel">Next level</button>
+            <div class="vehicle " id="vehicle">
+                <i class="fa fa-space-shuttle" aria-hidden="true"></i>
+                <i class="fas fa-starship-freighter " aria-hidden="true" id="vehicle-1"></i>
+
+            </div>
+
+
+            <div class="planets " id="planets">
+                <div class="planet earth animate__animated animate__pulse" id="earth"></div>
+                <div class="planet moon "></div>
+                <div class="planet mars animate__animated animate__pulse" id="mars"></div>
+                <div class="planet mercury animate__animated animate__pulse" id="mercury"></div>
+                <div class="planet venus animate__animated animate__pulse" id="venus"></div>
+                <div class="planet saturn animate__animated animate__pulse" id="saturn">
+                    <div class="saturn-circle">
+                    </div>
+                </div>
+                <div class="planet jupiter animate__animated animate__pulse" id="jupiter"></div>
+                <div class="planet neptune animate__animated animate__pulse" id="neptune"></div>
+                <div class="planet uranus animate__animated animate__pulse" id="uranus"></div>
+                <div class="planet pluto animate__animated animate__pulse" id="pluto"></div>
+            </div>
+            <div class="star-sun">
+                <div class="sun" id="sun"></div>
+            </div>
+            <div class="axis ">
+                <div class="earth-axis"></div>
+                <div class="mars-axis"></div>
+                <div class="venus-axis"></div>
+                <div class="mercury-axis"></div>
+                <div class="saturn-axis"></div>
+                <div class="jupiter-axis"></div>
+                <div class="neptune-axis"></div>
+                <div class="uranus-axis"></div>
+                <div class="pluto-axis"></div>
+            </div>
+            
+            <div class="obstacles">
+                <div class="obstacle-1" id="obstacle1">
+                </div>
+                <div class="obstacle-2" id="obstacle2">
+                </div>
+                <div class="obstacle-3" id="obstacle3">
+                </div>
+                <div class="obstacle-4" id="obstacle4">
+                </div>
+                <div class="obstacle-5" id="obstacle5">
+                </div>
+                <div class="obstacle-6" id="obstacle6">
+                </div>
+                <div class="obstacle-7" id="obstacle7">
+                </div>
+                <div class="obstacle-8" id="obstacle8">
+                </div>
+                <div class="obstacle-9" id="obstacle9">
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="stats-section" id="stats">
+            <h3 id="error1">Error1</h3>
+            <h3 id="error2">Error1</h3>
+            <h3 id="error3">Error1</h3>
+            <h3 id="error4">Error1</h3>
+            <h4>Combustibil consumat: <span id="movesConsumed">0</span></h4>
+            <h4>Distanta parcursa: <span id="distance">0</span> ani lumina</h4>
+            <h4>Planete vizitate: <span id="visitedPlanets">0</span></h4>
+            <button onclick="darkMode()">Light mode</button>
+            <button onclick="choicePlayer()">Player 1</button>
+            <button onclick="choicePlayer()">Player 2</button>
+
+        </div>
+    </div>
+    <div class="sun-barrier"></div>
+    <script src="js/game.js"></script>
+</body>
+
+</html>
